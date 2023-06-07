@@ -1,1 +1,1 @@
-# carlin-mitchell-etch-a-sketch-webpack-TOP
+# etch-a-sketch-webpack-TOP

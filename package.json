@@ -1,0 +1,19 @@
+{
+  "name": "carlin-mitchell-etch-a-sketch-webpack-top",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlin-mitchell/carlin-mitchell-etch-a-sketch-webpack-TOP.git"
+  },
+  "author": "Carlin Mitchell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlin-mitchell/carlin-mitchell-etch-a-sketch-webpack-TOP/issues"
+  },
+  "homepage": "https://github.com/carlin-mitchell/carlin-mitchell-etch-a-sketch-webpack-TOP#readme"
+}
