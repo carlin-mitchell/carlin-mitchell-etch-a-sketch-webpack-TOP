@@ -1,7 +1,6 @@
+import "./normalize.css";
 import "./style.css";
 
-import HelloWorld from "./components/HelloWorld";
+import TestHeader from "./components/HelloWorld";
 
-const testHeader = HelloWorld("Hello World");
-
-document.body.appendChild(testHeader);
+document.body.appendChild(TestHeader("Hello World"));
