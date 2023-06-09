@@ -9,4 +9,5 @@ import AnimationController from "./logic/AnimationController";
 
 document.body.appendChild(Content());
 
+// initialize single-use-controllers
 AnimationController();
