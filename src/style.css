@@ -7,8 +7,8 @@
   --gray-1: hsla(0, 0%, 95%, 1);
 
   /* fonts */
-  --footer-font-size: 1.2rem;
-  --header-font-size: 3.5rem;
+  --footer-font-size: 1.1rem;
+  --header-font-size: 2.5rem;
 
   /* border radius */
   --br-sm: 5px;
@@ -50,8 +50,12 @@ header {
   font-family: SpaceTime, sans-serif;
   display: grid;
   text-align: center;
-  font-size: var(--header-font-size);
+
   padding: 1rem 0 1.3rem 0;
+}
+
+header div {
+  font-size: var(--header-font-size);
 }
 
 /* main */
