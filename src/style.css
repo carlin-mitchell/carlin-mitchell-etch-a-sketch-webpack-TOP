@@ -1,4 +1,21 @@
 :root {
+  /* colors */
+  --gray-5: hsla(0, 0%, 35%, 1);
+  --gray-4: hsla(0, 0%, 50%, 1);
+  --gray-3: hsla(0, 0%, 65%, 1);
+  --gray-2: hsla(0, 0%, 80%, 1);
+  --gray-1: hsla(0, 0%, 95%, 1);
+
+  /* fonts */
+  --footer-font-size: 1rem;
+
+  /* border radius */
+  --br-sm: 5px;
+  --br-md: 10px;
+  --br-lg: 15px;
+
+  /* utility */
+  --marginSpace: 0.3rem;
 }
 
 * {

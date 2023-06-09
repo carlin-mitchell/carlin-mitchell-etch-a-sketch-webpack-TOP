@@ -1,6 +1,8 @@
+// stylesheets
 import "./normalize.css";
 import "./style.css";
 
-import TestHeader from "./components/HelloWorld";
+// components
+import Content from "./components/Content";
 
-document.body.appendChild(TestHeader("Hello World"));
+document.body.appendChild(Content());

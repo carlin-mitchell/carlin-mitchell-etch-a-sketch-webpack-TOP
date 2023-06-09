@@ -31,7 +31,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "XXXtitleXXX",
+      title: "etch-a-sketch",
     }),
   ],
   optimization: {
