@@ -62,7 +62,10 @@ header div {
 /* main */
 main {
   background-color: var(--gray-1);
+  display: grid;
+  grid-template-columns: 1fr 5fr;
 }
+
 /* footer */
 footer {
   background-color: var(--gray-5);
