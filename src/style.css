@@ -5,6 +5,7 @@
   --gray-3: hsla(0, 0%, 65%, 1);
   --gray-2: hsla(0, 0%, 80%, 1);
   --gray-1: hsla(0, 0%, 95%, 1);
+  --links: orangered;
 
   /* fonts */
   --footer-font-size: 1.1rem;
@@ -81,7 +82,7 @@ footer img {
 
 footer a {
   margin-left: var(--marginSpace);
-  color: orangered;
+  color: var(--links);
 }
 
 @keyframes github-hover-in {
