@@ -25,26 +25,7 @@ const Footer = () => {
 
   const githubIcon = Object.assign(document.createElement("img"), {
     src: GitHubIcon,
-  });
-
-  const attributionsLink = Object.assign(document.createElement("div"), {
-    className: "attributions-link",
-    innerText: `show site attributions`,
-    "data-show-attrs": false,
-    onclick: function () {
-      const attributionsContainer = document.querySelector(
-        ".attributions-container"
-      );
-      if (!this["data-show-attrs"]) {
-        attributionsContainer.classList.remove("removed");
-        this.innerText = "hide site attributions";
-        this["data-show-attrs"] = true;
-      } else {
-        attributionsContainer.classList.add("removed");
-        this.innerText = "show site attributions";
-        this["data-show-attrs"] = false;
-      }
-    },
+    className: "github-icon",
   });
 
   footer.appendChild(copyrightContainer);

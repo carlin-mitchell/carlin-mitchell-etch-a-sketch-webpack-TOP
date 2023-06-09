@@ -84,9 +84,30 @@ footer a {
   color: orangered;
 }
 
-footer img:hover {
-  scale: 1.2;
+@keyframes github-hover-in {
+  from {
+    rotate: 0deg;
+    scale: 1;
+  }
+  to {
+    rotate: 720deg;
+    scale: 1.2;
+  }
 }
+@keyframes github-hover-out {
+  from {
+    rotate: 720deg;
+    scale: 1.2;
+  }
+  to {
+    rotate: 0deg;
+    scale: 1;
+  }
+}
+
+/* footer img:hover {
+  animation: github-hover-in 1s forwards;
+} */
 
 footer img:active {
   scale: 1;
