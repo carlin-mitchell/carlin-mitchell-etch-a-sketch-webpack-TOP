@@ -7,7 +7,8 @@
   --gray-1: hsla(0, 0%, 95%, 1);
 
   /* fonts */
-  --footer-font-size: 1rem;
+  --footer-font-size: 1.2rem;
+  --header-font-size: 3.5rem;
 
   /* border radius */
   --br-sm: 5px;
@@ -18,12 +19,75 @@
   --marginSpace: 0.3rem;
 }
 
+@font-face {
+  font-family: "SpaceTime";
+  src: url("./global-assets/fonts/spacetime-regular.ttf");
+}
+
+@font-face {
+  font-family: "MonoRound";
+  src: url("./global-assets/fonts/Monoround.otf");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-.test-header {
-  color: red;
+body {
+  font-family: MonoRound, sans-serif;
 }
+
+#app {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+/* header */
+header {
+  background-color: var(--gray-3);
+  font-family: SpaceTime, sans-serif;
+  display: grid;
+  text-align: center;
+  font-size: var(--header-font-size);
+  padding: 1rem 0 1.3rem 0;
+}
+
+/* main */
+main {
+  background-color: var(--gray-1);
+}
+/* footer */
+footer {
+  background-color: var(--gray-5);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+  color: white;
+
+  padding: 2rem;
+
+  font-size: var(--footer-font-size);
+}
+
+footer img {
+  height: calc(var(--footer-font-size) - 0.1rem);
+}
+
+footer a {
+  margin-left: var(--marginSpace);
+  color: orangered;
+}
+
+footer img:hover {
+  scale: 1.2;
+}
+
+footer img:active {
+  scale: 1;
+}
+
+/* .test-header {
+  color: red;
+} */

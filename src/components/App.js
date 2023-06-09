@@ -2,12 +2,10 @@ import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer/Footer";
 
-const Content = () => {
-  const content = Object.assign(
-    document.createElement("div", {
-      className: "content",
-    })
-  );
+const App = () => {
+  const content = Object.assign(document.createElement("div"), {
+    id: "app",
+  });
 
   content.appendChild(Header());
   content.appendChild(Main());
@@ -16,4 +14,4 @@ const Content = () => {
   return content;
 };
 
-export default Content;
+export default App;
