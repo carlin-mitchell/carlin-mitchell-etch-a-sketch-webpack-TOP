@@ -16,6 +16,10 @@
   --br-md: 10px;
   --br-lg: 15px;
 
+  /* spacing */
+  --space-sm: 5px;
+  --space-md: 15px;
+
   /* utility */
   --marginSpace: 0.3rem;
 }
@@ -63,11 +67,28 @@ header div {
 main {
   background-color: var(--gray-1);
   display: grid;
-  grid-template-columns: minmax(10rem, 1fr) 5fr;
+  grid-template-columns: minmax(12rem, 1fr) 5fr;
 }
 
 .control-panel-container {
   background-color: var(--gray-2);
+  display: grid;
+  grid-template-columns: auto;
+  padding: var(--space-md);
+}
+
+.control-input-group {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.control-input-group .control-input-label {
+  margin-top: var(--space-sm);
+}
+
+.control-input {
+  width: 100%;
 }
 
 /* footer */
