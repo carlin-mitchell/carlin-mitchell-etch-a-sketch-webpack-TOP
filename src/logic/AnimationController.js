@@ -8,6 +8,8 @@ const AnimationController = () => {
       this.style.animation = "github-hover-out 1s forwards";
     },
   });
+
+  // control-panel
 };
 
 export default AnimationController;
