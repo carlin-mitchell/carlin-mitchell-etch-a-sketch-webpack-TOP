@@ -19,6 +19,7 @@
   /* spacing */
   --space-sm: 5px;
   --space-md: 15px;
+  --space-lg: 25px;
 
   /* utility */
   --marginSpace: 0.3rem;
@@ -67,14 +68,28 @@ header div {
 main {
   background-color: var(--gray-1);
   display: grid;
-  grid-template-columns: minmax(12rem, 1fr) 5fr;
+  grid-template-columns: minmax(15rem, 1fr) 5fr;
 }
 
 .control-panel-container {
   background-color: var(--gray-2);
   display: grid;
   grid-template-columns: auto;
-  padding: var(--space-md);
+  justify-content: space-evenly;
+  align-content: space-between;
+  padding: var(--space-lg);
+  font-size: 1.2rem;
+}
+
+.control-input {
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button.control-input {
+  padding-top: 0.25rem;
+  border-radius: var(--br-sm);
 }
 
 .control-input-group {
@@ -85,10 +100,6 @@ main {
 
 .control-input-group .control-input-label {
   margin-top: var(--space-sm);
-}
-
-.control-input {
-  width: 100%;
 }
 
 /* footer */
