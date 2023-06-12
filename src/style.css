@@ -63,7 +63,11 @@ header div {
 main {
   background-color: var(--gray-1);
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: minmax(10rem, 1fr) 5fr;
+}
+
+.control-panel-container {
+  background-color: var(--gray-2);
 }
 
 /* footer */
