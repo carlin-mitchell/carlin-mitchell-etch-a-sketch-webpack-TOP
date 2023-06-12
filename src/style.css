@@ -79,12 +79,29 @@ main {
   align-content: space-between;
   padding: var(--space-lg);
   font-size: 1.2rem;
+  z-index: 1;
+}
+
+#control-panel-exit-container {
+  display: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+#control-panel-exit-container img:hover {
+  scale: 1.1;
+}
+
+#control-panel-exit-container img:active {
+  scale: 1;
 }
 
 .control-input {
   width: 100%;
+  color: black;
   font-family: inherit;
   font-size: inherit;
+  cursor: pointer;
 }
 
 button.control-input {
@@ -100,6 +117,22 @@ button.control-input {
 
 .control-input-group .control-input-label {
   margin-top: var(--space-sm);
+}
+
+/* grid */
+#grid-container {
+  height: 100%;
+  padding: var(--space-lg);
+  display: grid;
+}
+
+#grid {
+  background-color: blue;
+  height: 75vh;
+  aspect-ratio: 1;
+  justify-self: center;
+  align-self: center;
+  z-index: 0;
 }
 
 /* footer */
@@ -121,7 +154,6 @@ footer img {
 
 footer a {
   margin-left: var(--marginSpace);
-  color: var(--links);
 }
 
 @keyframes github-hover-in {
@@ -145,14 +177,37 @@ footer a {
   }
 }
 
-/* footer img:hover {
-  animation: github-hover-in 1s forwards;
-} */
-
 footer img:active {
   scale: 1;
 }
 
-/* .test-header {
-  color: red;
-} */
+.top-link:visited {
+  color: var(--links);
+}
+
+/* UTILITY CLASSES */
+.removed {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 880px) {
+  #control-panel-exit-container {
+    display: inline-block;
+  }
+
+  .control-panel-container {
+    display: none;
+  }
+
+  #grid-container {
+    grid-column: 1/3;
+  }
+
+  #grid {
+    height: 85vw;
+  }
+}

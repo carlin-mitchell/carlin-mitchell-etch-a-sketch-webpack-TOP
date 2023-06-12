@@ -1,4 +1,6 @@
 //Component imports
+import ExitDiv from "./ExitDiv/ExitDiv";
+
 import PaintColorPicker from "./color-pickers/PaintColorPicker";
 import CanvasColorPicker from "./color-pickers/CanvasColorPicker";
 
@@ -9,19 +11,20 @@ import RainbowModeButton from "./buttons/RainbowModeButton";
 import ShadeModeButton from "./buttons/ShadeModeButton";
 
 const ControlPanel = () => {
-  const panelContainer = Object.assign(document.createElement("div"), {
+  const container = Object.assign(document.createElement("div"), {
     className: "control-panel-container",
   });
 
-  panelContainer.appendChild(PaintColorPicker());
-  panelContainer.appendChild(CanvasColorPicker());
-  panelContainer.appendChild(EraseBrushButton());
-  panelContainer.appendChild(EraseGridButton());
-  panelContainer.appendChild(ToggleGridlinesButton());
-  panelContainer.appendChild(RainbowModeButton());
-  panelContainer.appendChild(ShadeModeButton());
+  container.appendChild(ExitDiv());
+  container.appendChild(PaintColorPicker());
+  container.appendChild(CanvasColorPicker());
+  container.appendChild(EraseBrushButton());
+  container.appendChild(EraseGridButton());
+  container.appendChild(ToggleGridlinesButton());
+  container.appendChild(RainbowModeButton());
+  container.appendChild(ShadeModeButton());
 
-  return panelContainer;
+  return container;
 };
 
 export default ControlPanel;
