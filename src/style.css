@@ -198,6 +198,10 @@ footer img:active {
   scale: 1;
 }
 
+.top-link {
+  color: var(--links);
+}
+
 .top-link:visited {
   color: var(--links);
 }
