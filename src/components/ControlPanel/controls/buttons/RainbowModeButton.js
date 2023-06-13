@@ -1,4 +1,4 @@
-import Button from "../../basic-elements/Button";
+import Button from "../../../basic-elements/Button";
 
 const RainbowModeButton = () => {
   const container = Object.assign(document.createElement("div"));

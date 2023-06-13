@@ -116,6 +116,11 @@ button.control-input {
   flex-direction: column;
 }
 
+.control-input-label {
+  display: block;
+  text-align: center;
+}
+
 .control-input-group .control-input-label {
   margin-top: var(--space-sm);
 }
@@ -198,7 +203,7 @@ footer img:active {
   scale: 1;
 }
 
-.top-link {
+.top-link:visited {
   color: var(--links);
 }
 

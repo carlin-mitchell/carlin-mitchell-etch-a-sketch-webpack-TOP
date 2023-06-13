@@ -1,11 +1,10 @@
-import Button from "../../basic-elements/Button";
+import Button from "../../../basic-elements/Button";
 
-const EraseBrushButton = () => {
+const ShadeModeButton = () => {
   const container = Object.assign(document.createElement("div"));
-
   const button = Object.assign(Button(), {
-    id: "erase-brush-button",
-    innerText: "Erase",
+    id: "shade-mode-button",
+    innerText: "Shade mode",
     className: "control-input",
   });
 
@@ -14,4 +13,4 @@ const EraseBrushButton = () => {
   return container;
 };
 
-export default EraseBrushButton;
+export default ShadeModeButton;

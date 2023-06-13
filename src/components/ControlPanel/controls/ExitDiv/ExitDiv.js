@@ -1,6 +1,6 @@
 import HideIcon from "./icons/eye-hide.png";
 
-import screen from "../../../logic/ScreenController";
+import screen from "../../../../logic/ScreenController";
 
 const ExitDiv = () => {
   const container = Object.assign(document.createElement("div"), {

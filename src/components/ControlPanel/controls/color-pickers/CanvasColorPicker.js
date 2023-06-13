@@ -1,5 +1,4 @@
-import ColorPicker from "../../basic-elements/ColorPicker";
-import Label from "../../basic-elements/Label";
+import ColorPicker from "../../../basic-elements/ColorPicker";
 
 const CanvasColorPicker = () => {
   const container = Object.assign(document.createElement("div"), {

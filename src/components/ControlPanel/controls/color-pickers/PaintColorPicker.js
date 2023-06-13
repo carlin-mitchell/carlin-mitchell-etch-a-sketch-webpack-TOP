@@ -1,4 +1,4 @@
-import ColorPicker from "../../basic-elements/ColorPicker";
+import ColorPicker from "../../../basic-elements/ColorPicker";
 
 const PaintColorPicker = () => {
   const container = Object.assign(document.createElement("div"), {

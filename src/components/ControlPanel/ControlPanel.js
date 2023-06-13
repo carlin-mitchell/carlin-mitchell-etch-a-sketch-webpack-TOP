@@ -1,14 +1,16 @@
 //Component imports
-import ExitDiv from "./ExitDiv/ExitDiv";
+import ExitDiv from "./controls/ExitDiv/ExitDiv";
 
-import PaintColorPicker from "./color-pickers/PaintColorPicker";
-import CanvasColorPicker from "./color-pickers/CanvasColorPicker";
+import PaintColorPicker from "./controls/color-pickers/PaintColorPicker";
+import CanvasColorPicker from "./controls/color-pickers/CanvasColorPicker";
 
-import EraseBrushButton from "./buttons/EraseBrushButton";
-import EraseGridButton from "./buttons/EraseGridButton";
-import ToggleGridlinesButton from "./buttons/ToggleGridlinesButton";
-import RainbowModeButton from "./buttons/RainbowModeButton";
-import ShadeModeButton from "./buttons/ShadeModeButton";
+import EraseBrushButton from "./controls/buttons/EraseBrushButton";
+import EraseGridButton from "./controls/buttons/EraseGridButton";
+import ToggleGridlinesButton from "./controls/buttons/ToggleGridlinesButton";
+import RainbowModeButton from "./controls/buttons/RainbowModeButton";
+import ShadeModeButton from "./controls/buttons/ShadeModeButton";
+
+import GridSizeSelector from "./controls/GridSizeSelector";
 
 const ControlPanel = () => {
   const container = Object.assign(document.createElement("div"), {
@@ -23,6 +25,7 @@ const ControlPanel = () => {
   container.appendChild(ToggleGridlinesButton());
   container.appendChild(RainbowModeButton());
   container.appendChild(ShadeModeButton());
+  container.appendChild(GridSizeSelector());
 
   return container;
 };
