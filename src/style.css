@@ -75,16 +75,18 @@ main {
 @keyframes slide-in {
   from {
     transform: translateX(-100%);
-    display: grid;
+    display: none;
   }
   to {
     transform: translateX(0%);
+    display: grid;
   }
 }
 
 @keyframes slide-out {
   from {
     transform: translateX(0%);
+    display: grid;
   }
   to {
     transform: translateX(-100%);
@@ -245,15 +247,10 @@ footer img:active {
 
 /* media queries */
 @media only screen and (max-width: 1000px) {
-  #grid-container {
-    grid-column: 1/-1;
-  }
-
   #grid {
     height: 70vw;
   }
-
-  #control-icon {
-    display: inline-block;
+  #control-panel-container {
+    animation: "slide-out 1s forwards";
   }
 }

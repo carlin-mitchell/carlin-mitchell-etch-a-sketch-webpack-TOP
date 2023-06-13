@@ -21,6 +21,13 @@ const AnimationController = () => {
       controlPanel.style.animation = "slide-out 1s forwards";
     },
   });
+
+  window.onresize = function (e) {
+    const { innerWidth } = e.target;
+    if (innerWidth <= 1000) {
+      controlPanel.style.animation = "slide-out .5s forwards";
+    }
+  };
 };
 
 export default AnimationController;
