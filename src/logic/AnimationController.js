@@ -10,6 +10,17 @@ const AnimationController = () => {
   });
 
   // control-panel
+  const controlPanel = document.querySelector("#control-panel-container");
+  Object.assign(document.querySelector("#control-icon"), {
+    onclick: function () {
+      controlPanel.style.animation = "slide-in 1s forwards";
+    },
+  });
+  Object.assign(document.querySelector("#hide-control-panel-icon"), {
+    onclick: function () {
+      controlPanel.style.animation = "slide-out 1s forwards";
+    },
+  });
 };
 
 export default AnimationController;

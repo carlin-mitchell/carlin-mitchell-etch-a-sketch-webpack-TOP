@@ -71,6 +71,27 @@ main {
   grid-template-columns: minmax(15rem, 1fr) 5fr;
 }
 
+/* control panel */
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+    display: grid;
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+    display: none;
+  }
+}
+
 #control-panel-container {
   background-color: var(--gray-2);
   display: grid;
@@ -153,7 +174,7 @@ button.control-input {
 
 #grid {
   background-color: blue;
-  height: 75vh;
+  height: 70vh;
   aspect-ratio: 1;
   justify-self: center;
   align-self: center;
@@ -213,7 +234,7 @@ footer img:active {
   color: var(--links);
 }
 
-/* UTILITY CLASSES */
+/* utility classes */
 .removed {
   display: none;
 }
@@ -222,13 +243,14 @@ footer img:active {
   visibility: hidden;
 }
 
+/* media queries */
 @media only screen and (max-width: 1000px) {
   #grid-container {
     grid-column: 1/-1;
   }
 
   #grid {
-    height: 75vw;
+    height: 70vw;
   }
 
   #control-icon {
