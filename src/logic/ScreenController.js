@@ -10,12 +10,12 @@ const ScreenController = (() => {
     controlPanel.style.display = "none";
   };
 
-  window.onresize = function (e) {
-    const screenWidth = e.target.outerWidth;
-    if (screenWidth <= 1000) {
-      showControlPanel();
-    }
-  };
+  // window.onresize = function (e) {
+  //   const screenWidth = e.target.outerWidth;
+  //   if (screenWidth <= 1000) {
+  //     showControlPanel();
+  //   }
+  // };
 
   return { showControlPanel, hideControlPanel };
 })();
