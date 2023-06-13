@@ -12,7 +12,7 @@ import ShadeModeButton from "./buttons/ShadeModeButton";
 
 const ControlPanel = () => {
   const container = Object.assign(document.createElement("div"), {
-    className: "control-panel-container",
+    id: "control-panel-container",
   });
 
   container.appendChild(ExitDiv());

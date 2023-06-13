@@ -1,6 +1,6 @@
 import ControlIcon from "./ControlIcon/ControlIcon";
 
-const GridSection = () => {
+const GridContainer = () => {
   const container = Object.assign(document.createElement("div"), {
     id: "grid-container",
   });
@@ -13,4 +13,4 @@ const GridSection = () => {
   return container;
 };
 
-export default GridSection;
+export default GridContainer;

@@ -10,7 +10,7 @@ const ControlIcon = () => {
     id: "control-icon",
     src: ControlIconPath,
     onclick: function () {
-      //   screen.showControlPanel();
+      screen.showControlPanel();
     },
   });
   container.appendChild(icon);

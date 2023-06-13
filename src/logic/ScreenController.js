@@ -1,9 +1,15 @@
 const ScreenController = (() => {
   const showControlPanel = function () {
-    const controlPanel = document.querySelector(".control-panel-container");
-    controlPanel.style.display = "inline-block";
+    const controlPanel = document.querySelector("#control-panel-container");
+    controlPanel.style.display = "grid";
   };
-  return { showControlPanel };
+
+  const hideControlPanel = function () {
+    const controlPanel = document.querySelector("#control-panel-container");
+    controlPanel.style.display = "none";
+  };
+
+  return { showControlPanel, hideControlPanel };
 })();
 
 export default ScreenController;
