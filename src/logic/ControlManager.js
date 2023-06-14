@@ -20,13 +20,24 @@ const ControlManager = (() => {
     canvas.resetCanvas();
   }
 
+  function setPaintColorToErase() {
+    state.setPaintColor(state.getCanvasBackgroundColor());
+    document.querySelector("#paint-color-picker").value = state.getPaintColor();
+  }
+
   function setCanvasColor(e) {
     const color = e.target.value;
     state.setCanvasBackgroundColor(color);
     canvas.resetCanvas();
   }
 
-  return { setGridSize, setPaintColor, eraseGrid, setCanvasColor };
+  return {
+    setGridSize,
+    setPaintColor,
+    eraseGrid,
+    setCanvasColor,
+    setPaintColorToErase,
+  };
 })();
 
 export default ControlManager;

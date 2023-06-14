@@ -1,4 +1,5 @@
 import Button from "../../../basic-elements/Button";
+import controls from "../../../../logic/ControlManager";
 
 const EraseBrushButton = () => {
   const container = Object.assign(document.createElement("div"));
@@ -7,6 +8,9 @@ const EraseBrushButton = () => {
     id: "erase-brush-button",
     innerText: "Erase",
     className: "control-input",
+    onclick: function () {
+      controls.setPaintColorToErase();
+    },
   });
 
   container.appendChild(button);
