@@ -1,5 +1,5 @@
 import Button from "../../../basic-elements/Button";
-import canvas from "../../../../logic/CanvasManager";
+import controls from "../../../../logic/CanvasManager";
 
 const EraseCanvasButton = () => {
   const container = Object.assign(document.createElement("div"));
@@ -8,7 +8,7 @@ const EraseCanvasButton = () => {
     innerText: "Erase grid",
     className: "control-input",
     onclick: function () {
-      canvas.eraseCanvas();
+      controls.resetCanvas();
     },
   });
 

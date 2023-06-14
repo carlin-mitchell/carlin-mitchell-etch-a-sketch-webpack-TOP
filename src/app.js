@@ -12,7 +12,6 @@ import state from "./logic/StateManager";
 
 document.body.appendChild(Content());
 
-// initialize single-use-controllers
 AnimationManager.applyAnimations();
 CanvasManager.updateGridSize();
 ControlManager.setGridSize(state.getGridSize());

@@ -18,10 +18,8 @@ const CanvasManager = (() => {
     }
   }
 
-  function eraseCanvas() {
+  function resetCanvas() {
     const canvasSquares = [...document.querySelectorAll(".canvas-square")];
-
-    console.log(state.getCanvasBackgroundColor());
 
     setElementsBgColor(
       canvasSquares,
@@ -45,7 +43,7 @@ const CanvasManager = (() => {
     }
   }
 
-  return { updateGridSize, paintCanvasSquare, eraseCanvas };
+  return { updateGridSize, paintCanvasSquare, resetCanvas };
 })();
 
 export default CanvasManager;

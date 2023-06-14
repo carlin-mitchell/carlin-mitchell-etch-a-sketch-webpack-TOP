@@ -1,5 +1,5 @@
 const StateManager = (() => {
-  let gridSize = 64;
+  let gridSize = 32;
   const getGridSize = () => gridSize;
   const setGridSize = (value) => (gridSize = value);
 

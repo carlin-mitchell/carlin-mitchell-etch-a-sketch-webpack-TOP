@@ -11,14 +11,22 @@ const ControlManager = (() => {
     canvas.updateGridSize();
   }
 
-  function updatePaintColor(e) {
+  function setPaintColor(e) {
     const color = e.target.value;
     state.setPaintColor(color);
   }
 
-  function eraseGrid() {}
+  function eraseGrid() {
+    canvas.resetCanvas();
+  }
 
-  return { setGridSize, updatePaintColor };
+  function setCanvasColor(e) {
+    const color = e.target.value;
+    state.setCanvasBackgroundColor(color);
+    canvas.resetCanvas();
+  }
+
+  return { setGridSize, setPaintColor, eraseGrid, setCanvasColor };
 })();
 
 export default ControlManager;

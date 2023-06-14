@@ -10,7 +10,7 @@ const PaintColorPicker = () => {
     id: "paint-color-picker",
     className: "control-input",
     oninput: function (e) {
-      controls.updatePaintColor(e);
+      controls.setPaintColor(e);
     },
   });
 
