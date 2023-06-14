@@ -27,6 +27,13 @@ const CanvasManager = (() => {
     );
   }
 
+  function toggleGridlines() {
+    const canvasSquares = [...document.querySelectorAll(".canvas-square")];
+    const canvas = document.querySelector("#canvas");
+    canvas.classList.toggle("full-borders");
+    canvasSquares.forEach((square) => square.classList.toggle("no-borders"));
+  }
+
   function updateGridSize() {
     const gridSize = state.getGridSize();
     const totalSquares = gridSize ** 2;
@@ -43,7 +50,7 @@ const CanvasManager = (() => {
     }
   }
 
-  return { updateGridSize, paintCanvasSquare, resetCanvas };
+  return { updateGridSize, paintCanvasSquare, resetCanvas, toggleGridlines };
 })();
 
 export default CanvasManager;

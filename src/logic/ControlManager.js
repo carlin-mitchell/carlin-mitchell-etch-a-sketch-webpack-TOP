@@ -31,12 +31,17 @@ const ControlManager = (() => {
     canvas.resetCanvas();
   }
 
+  function toggleGridlines() {
+    canvas.toggleGridlines();
+  }
+
   return {
     setGridSize,
     setPaintColor,
     eraseGrid,
     setCanvasColor,
     setPaintColorToErase,
+    toggleGridlines,
   };
 })();
 

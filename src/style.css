@@ -7,6 +7,8 @@
   --gray-1: hsla(0, 0%, 95%, 1);
   --links: #ff3300;
 
+  /* canvas */
+  --canvas-borders: 1px solid black;
   /* fonts */
   --footer-font-size: 1.1rem;
   --header-font-size: 2.5rem;
@@ -173,8 +175,8 @@ button.control-input:active {
 
 #canvas {
   background-color: var(--gray-1);
-  border-left: 1px solid black;
-  border-top: 1px solid black;
+  border-left: var(--canvas-borders);
+  border-top: var(--canvas-borders);
   display: grid;
   height: 70vh;
   aspect-ratio: 1;
@@ -198,9 +200,17 @@ button.control-input:active {
 }
 
 .canvas-square {
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
+  border-right: var(--canvas-borders);
+  border-bottom: var(--canvas-borders);
   cursor: pointer;
+}
+
+.no-borders {
+  border: none;
+}
+
+.full-borders {
+  border: var(--canvas-borders);
 }
 
 .canvas-square:hover {
