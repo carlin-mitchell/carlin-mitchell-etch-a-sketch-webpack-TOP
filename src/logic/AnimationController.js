@@ -10,14 +10,14 @@ const AnimationController = () => {
   });
 
   // control-panel
-
+  const controlPanel = document.querySelector("#control-panel-container");
   const slideIn = function () {
-    const controlPanel = document.querySelector("#control-panel-container");
+    // const controlPanel = document.querySelector("#control-panel-container");
     controlPanel.style.animation = "slide-in .75s forwards";
     controlPanel["data-isVisible"] = true;
   };
   const slideOut = function () {
-    const controlPanel = document.querySelector("#control-panel-container");
+    // const controlPanel = document.querySelector("#control-panel-container");
     controlPanel.style.animation = "slide-out .75s forwards";
     controlPanel["data-isVisible"] = false;
   };
@@ -34,9 +34,8 @@ const AnimationController = () => {
   });
 
   window.onresize = function (e) {
-    const controlPanel = document.querySelector("#control-panel-container");
     const { innerWidth } = e.target;
-    if (innerWidth <= 1000) {
+    if (innerWidth <= 1150) {
       slideOut();
     } else {
       if (!controlPanel["data-isVisible"]) {
