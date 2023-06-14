@@ -1,4 +1,5 @@
 import state from "./StateManager";
+import { hexToRgbStr, setElementsBgColor } from "./utilities";
 
 import CanvasSquare from "../components/CanvasSection/CanvasSquare";
 
@@ -11,10 +12,21 @@ const CanvasManager = (() => {
   }
 
   function paintCanvasSquare(e) {
-    const square = e.target;
     if (e.type === "mousedown" || state.getLeftMouseButtonDown()) {
+      const square = e.target;
       square.style.backgroundColor = state.getPaintColor();
     }
+  }
+
+  function eraseCanvas() {
+    const canvasSquares = [...document.querySelectorAll(".canvas-square")];
+
+    console.log(state.getCanvasBackgroundColor());
+
+    setElementsBgColor(
+      canvasSquares,
+      hexToRgbStr(state.getCanvasBackgroundColor())
+    );
   }
 
   function updateGridSize() {
@@ -27,21 +39,13 @@ const CanvasManager = (() => {
     canvas.style["grid-template-rows"] = `repeat(${gridSize}, 1fr)`;
     canvas.style["grid-template-columns"] = `repeat(${gridSize}, 1fr)`;
 
-    for (let id = 1; id <= totalSquares; id++) {
-      const square = CanvasSquare(id);
-      square.style.backgroundColor = state.getCanvasBackgroundColor();
-
-      square.onmousedown = function (e) {
-        paintCanvasSquare(e);
-      };
-      square.onmouseover = function (e) {
-        paintCanvasSquare(e);
-      };
+    for (let idNum = 1; idNum <= totalSquares; idNum++) {
+      const square = CanvasSquare(idNum);
       canvas.appendChild(square);
     }
   }
 
-  return { updateGridSize };
+  return { updateGridSize, paintCanvasSquare, eraseCanvas };
 })();
 
 export default CanvasManager;

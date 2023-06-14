@@ -10,7 +10,15 @@ const ControlManager = (() => {
     gridSizeSelectorLabel.innerText = `Grid size: ${state.getGridSize()} x ${state.getGridSize()}`;
     canvas.updateGridSize();
   }
-  return { setGridSize };
+
+  function updatePaintColor(e) {
+    const color = e.target.value;
+    state.setPaintColor(color);
+  }
+
+  function eraseGrid() {}
+
+  return { setGridSize, updatePaintColor };
 })();
 
 export default ControlManager;

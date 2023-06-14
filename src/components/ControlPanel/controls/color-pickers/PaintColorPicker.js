@@ -1,4 +1,5 @@
 import ColorPicker from "../../../basic-elements/ColorPicker";
+import controls from "../../../../logic/ControlManager";
 
 const PaintColorPicker = () => {
   const container = Object.assign(document.createElement("div"), {
@@ -8,6 +9,9 @@ const PaintColorPicker = () => {
   const colorPicker = Object.assign(ColorPicker(), {
     id: "paint-color-picker",
     className: "control-input",
+    oninput: function (e) {
+      controls.updatePaintColor(e);
+    },
   });
 
   const label = Object.assign(document.createElement("div"), {

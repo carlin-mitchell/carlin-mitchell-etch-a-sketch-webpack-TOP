@@ -3,7 +3,7 @@ const StateManager = (() => {
   const getGridSize = () => gridSize;
   const setGridSize = (value) => (gridSize = value);
 
-  let canvasBackgroundColor = "hsla(0, 0%, 95%, 1)";
+  let canvasBackgroundColor = "#f2f2f2";
   const getCanvasBackgroundColor = () => canvasBackgroundColor;
   const setCanvasBackgroundColor = (color) => (canvasBackgroundColor = color);
 
