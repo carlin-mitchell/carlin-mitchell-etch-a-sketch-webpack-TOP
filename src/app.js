@@ -5,9 +5,14 @@ import "./style.css";
 import Content from "./components/App";
 
 // logic managers
-import AnimationController from "./logic/AnimationController";
+import AnimationManager from "./logic/AnimationManager";
+import CanvasManager from "./logic/CanvasManager";
+import ControlManager from "./logic/ControlManager";
+import state from "./logic/StateManager";
 
 document.body.appendChild(Content());
 
 // initialize single-use-controllers
-AnimationController();
+AnimationManager.applyAnimations();
+CanvasManager.updateGridSize();
+ControlManager.setGridSize(state.getGridSize());

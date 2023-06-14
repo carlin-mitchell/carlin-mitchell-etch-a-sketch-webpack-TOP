@@ -172,7 +172,10 @@ button.control-input:active {
 }
 
 #canvas {
-  background-color: blue;
+  background-color: var(--gray-1);
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  display: grid;
   height: 70vh;
   aspect-ratio: 1;
   justify-self: center;
@@ -192,6 +195,11 @@ button.control-input:active {
 }
 #control-icon:active {
   scale: 1;
+}
+
+.canvas-square {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 /* footer */
@@ -262,7 +270,7 @@ footer img:active {
 
 /* media queries */
 @media only screen and (max-width: 1000px) {
-  #grid {
+  #canvas {
     height: 70vw;
   }
 }
