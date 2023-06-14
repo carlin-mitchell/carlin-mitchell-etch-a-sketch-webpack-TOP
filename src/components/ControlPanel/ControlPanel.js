@@ -15,6 +15,7 @@ import GridSizeSelector from "./controls/GridSizeSelector";
 const ControlPanel = () => {
   const container = Object.assign(document.createElement("div"), {
     id: "control-panel-container",
+    "data-isVisible": true,
   });
 
   container.appendChild(ExitDiv());

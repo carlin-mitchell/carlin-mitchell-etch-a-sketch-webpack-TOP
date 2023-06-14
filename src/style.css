@@ -75,22 +75,22 @@ main {
 @keyframes slide-in {
   from {
     transform: translateX(-100%);
-    display: none;
+    visibility: hidden;
   }
   to {
     transform: translateX(0%);
-    display: grid;
+    visibility: visible;
   }
 }
 
 @keyframes slide-out {
   from {
     transform: translateX(0%);
-    display: grid;
+    visibility: visible;
   }
   to {
     transform: translateX(-100%);
-    display: none;
+    visibility: hidden;
   }
 }
 
@@ -104,6 +104,8 @@ main {
   z-index: 10;
   grid-row: 1/2;
   grid-column: 1/2;
+
+  visibility: visible;
 }
 
 #control-panel-exit-container {
@@ -251,6 +253,6 @@ footer img:active {
     height: 70vw;
   }
   #control-panel-container {
-    animation: "slide-out 1s forwards";
+    visibility: hidden;
   }
 }
