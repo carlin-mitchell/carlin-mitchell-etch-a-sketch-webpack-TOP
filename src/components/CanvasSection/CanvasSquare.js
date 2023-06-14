@@ -10,7 +10,13 @@ const CanvasSquare = (idNum) => {
       e.preventDefault();
       canvas.paintCanvasSquare(e);
     },
+    ontouchstart: function (e) {
+      canvas.paintCanvasSquare(e);
+    },
     onmouseover: function (e) {
+      canvas.paintCanvasSquare(e);
+    },
+    ontouchmove: function (e) {
       canvas.paintCanvasSquare(e);
     },
   });
