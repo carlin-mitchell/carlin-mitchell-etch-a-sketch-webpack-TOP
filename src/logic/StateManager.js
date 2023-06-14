@@ -1,5 +1,7 @@
+import config from "./appConfig";
+
 const StateManager = (() => {
-  let gridSize = 32;
+  let gridSize = config.startingGridSize;
   const getGridSize = () => gridSize;
   const setGridSize = (value) => (gridSize = value);
 

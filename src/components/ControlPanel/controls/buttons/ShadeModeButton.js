@@ -5,7 +5,7 @@ const ShadeModeButton = () => {
   const button = Object.assign(Button(), {
     id: "shade-mode-button",
     innerText: "Shade mode",
-    className: "control-input",
+    className: "control-input mode-button",
   });
 
   container.appendChild(button);

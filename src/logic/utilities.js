@@ -78,6 +78,28 @@ export const appendLoremLines = (parent, numLines) => {
   }
 };
 
+export const disableElements = (elementsArr) => {
+  if (typeof elementsArr !== "object") return;
+  if (!Array.isArray(elementsArr)) {
+    // if a single element is given, put it in an array
+    elementsArr = [elementsArr];
+  }
+  elementsArr.forEach((element) => {
+    element.disabled = true;
+  });
+};
+
+export const enableElements = (elementsArr) => {
+  if (typeof elementsArr !== "object") return;
+  if (!Array.isArray(elementsArr)) {
+    // if a single element is given, put it in an array
+    elementsArr = [elementsArr];
+  }
+  elementsArr.forEach((element) => {
+    element.disabled = false;
+  });
+};
+
 //####################### NON EXPORTED UTILS #########################
 /**
  *
