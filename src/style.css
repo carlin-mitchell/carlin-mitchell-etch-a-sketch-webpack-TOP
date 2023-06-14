@@ -160,7 +160,7 @@ button.control-input:active {
 }
 
 /* grid */
-#grid-container {
+#canvas-container {
   height: 100%;
   padding: var(--space-lg);
 
@@ -171,6 +171,14 @@ button.control-input:active {
   z-index: 0;
 }
 
+#canvas {
+  background-color: blue;
+  height: 70vh;
+  aspect-ratio: 1;
+  justify-self: center;
+  align-self: center;
+}
+
 #control-icon {
   border: 3px solid black;
   border-radius: var(--br-md);
@@ -179,21 +187,11 @@ button.control-input:active {
 
   padding: var(--space-sm);
 }
-
 #control-icon:hover {
   scale: 1.1;
 }
-
 #control-icon:active {
   scale: 1;
-}
-
-#grid {
-  background-color: blue;
-  height: 70vh;
-  aspect-ratio: 1;
-  justify-self: center;
-  align-self: center;
 }
 
 /* footer */
