@@ -281,4 +281,7 @@ footer img:active {
   #canvas {
     height: 70vw;
   }
+  #control-panel-container {
+    visibility: hidden;
+  }
 }
