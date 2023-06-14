@@ -16,3 +16,11 @@ document.body.appendChild(Content());
 AnimationManager.applyAnimations();
 CanvasManager.updateGridSize();
 ControlManager.setGridSize(state.getGridSize());
+
+window.onmousedown = function () {
+  state.setLeftMouseButtonDown(true);
+};
+
+window.onmouseup = function () {
+  state.setLeftMouseButtonDown(false);
+};

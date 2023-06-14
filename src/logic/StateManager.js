@@ -3,7 +3,31 @@ const StateManager = (() => {
   const getGridSize = () => gridSize;
   const setGridSize = (value) => (gridSize = value);
 
-  return { getGridSize, setGridSize };
+  let canvasBackgroundColor = "hsla(0, 0%, 95%, 1)";
+  const getCanvasBackgroundColor = () => canvasBackgroundColor;
+  const setCanvasBackgroundColor = (color) => (canvasBackgroundColor = color);
+
+  let paintColor = "#000";
+  const getPaintColor = () => paintColor;
+  const setPaintColor = (color) => (paintColor = color);
+
+  let leftMouseButtonDown = false;
+  const getLeftMouseButtonDown = () => leftMouseButtonDown;
+  const setLeftMouseButtonDown = (value) => (leftMouseButtonDown = value);
+
+  return {
+    getLeftMouseButtonDown,
+    setLeftMouseButtonDown,
+
+    getGridSize,
+    setGridSize,
+
+    getCanvasBackgroundColor,
+    setCanvasBackgroundColor,
+
+    setPaintColor,
+    getPaintColor,
+  };
 })();
 
 export default StateManager;

@@ -10,6 +10,13 @@ const CanvasManager = (() => {
     }
   }
 
+  function paintCanvasSquare(e) {
+    const square = e.target;
+    if (e.type === "mousedown" || state.getLeftMouseButtonDown()) {
+      square.style.backgroundColor = state.getPaintColor();
+    }
+  }
+
   function updateGridSize() {
     const gridSize = state.getGridSize();
     const totalSquares = gridSize ** 2;
@@ -21,7 +28,15 @@ const CanvasManager = (() => {
     canvas.style["grid-template-columns"] = `repeat(${gridSize}, 1fr)`;
 
     for (let id = 1; id <= totalSquares; id++) {
-      const square = Object.assign(CanvasSquare(id), {});
+      const square = CanvasSquare(id);
+      square.style.backgroundColor = state.getCanvasBackgroundColor();
+
+      square.onmousedown = function (e) {
+        paintCanvasSquare(e);
+      };
+      square.onmouseover = function (e) {
+        paintCanvasSquare(e);
+      };
       canvas.appendChild(square);
     }
   }

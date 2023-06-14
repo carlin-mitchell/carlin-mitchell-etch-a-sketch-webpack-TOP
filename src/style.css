@@ -200,8 +200,16 @@ button.control-input:active {
 .canvas-square {
   border-right: 1px solid black;
   border-bottom: 1px solid black;
+  cursor: pointer;
 }
 
+.canvas-square:hover {
+  scale: 1.01;
+  box-shadow: 0px 0px 0.3rem black;
+}
+.canvas-square:active {
+  scale: 1;
+}
 /* footer */
 footer {
   background-color: var(--gray-5);
