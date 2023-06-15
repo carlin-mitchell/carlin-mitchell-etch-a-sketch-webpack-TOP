@@ -22,7 +22,14 @@ window.onmousedown = function () {
   state.setLeftMouseButtonDown(true);
 };
 
+window.ontouchstart = function () {
+  state.setLeftMouseButtonDown(true);
+};
+
 window.onmouseup = function () {
+  state.setLeftMouseButtonDown(false);
+};
+window.ontouchend = function () {
   state.setLeftMouseButtonDown(false);
 };
 

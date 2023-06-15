@@ -12,7 +12,11 @@ const CanvasManager = (() => {
   }
 
   function paintCanvasSquare(e) {
-    if (e.type === "mousedown" || state.getLeftMouseButtonDown()) {
+    if (
+      e.type === "mousedown" ||
+      e.type === "touchstart" ||
+      state.getLeftMouseButtonDown()
+    ) {
       const square = e.target;
       square.style.backgroundColor = state.getPaintColor();
     }
