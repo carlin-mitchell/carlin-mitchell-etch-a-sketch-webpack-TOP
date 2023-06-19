@@ -1,3 +1,5 @@
+import config from "./appConfig";
+
 const AnimationManager = (() => {
   function applyAnimations() {
     Object.assign(document.querySelector(".github-icon"), {
@@ -39,7 +41,7 @@ const AnimationManager = (() => {
 
     window.onresize = function (e) {
       const { innerWidth } = e.target;
-      if (innerWidth <= 1150) {
+      if (innerWidth <= config.controlPanelAnimationTriggerWidth) {
         slideOut();
       } else {
         if (!controlPanel["data-isVisible"]) {

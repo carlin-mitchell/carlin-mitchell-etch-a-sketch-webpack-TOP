@@ -17,6 +17,11 @@ const StateManager = (() => {
   const getLeftMouseButtonDown = () => leftMouseButtonDown;
   const setLeftMouseButtonDown = (value) => (leftMouseButtonDown = value);
 
+  let gridlinesToggledOn = true;
+  // console.log(gridlinesToggledOn);
+  const getGridlinesToggledOn = () => gridlinesToggledOn;
+  const setGridlinesToggleOn = (value) => (gridlinesToggledOn = value);
+
   return {
     getLeftMouseButtonDown,
     setLeftMouseButtonDown,
@@ -29,6 +34,9 @@ const StateManager = (() => {
 
     setPaintColor,
     getPaintColor,
+
+    getGridlinesToggledOn,
+    setGridlinesToggleOn,
   };
 })();
 

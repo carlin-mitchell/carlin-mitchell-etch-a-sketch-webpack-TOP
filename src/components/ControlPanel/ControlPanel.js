@@ -12,6 +12,8 @@ import ShadeModeButton from "./controls/buttons/ShadeModeButton";
 
 import GridSizeSelector from "./controls/GridSizeSelector";
 
+import config from "../../logic/appConfig";
+
 const ControlPanel = () => {
   const container = Object.assign(document.createElement("div"), {
     id: "control-panel-container",

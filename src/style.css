@@ -9,6 +9,7 @@
 
   /* canvas */
   --canvas-borders: 1px solid black;
+
   /* fonts */
   --footer-font-size: 1.1rem;
   --header-font-size: 2.5rem;
@@ -269,11 +270,11 @@ footer img:active {
   scale: 1;
 }
 
-.top-link:visited {
+#top-link:visited {
   color: var(--links);
 }
 
-.top-link:visited {
+#top-link:visited {
   color: var(--links);
 }
 

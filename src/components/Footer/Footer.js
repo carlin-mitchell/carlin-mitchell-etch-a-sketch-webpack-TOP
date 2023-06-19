@@ -14,7 +14,7 @@ const Footer = () => {
   });
 
   const topLink = Object.assign(document.createElement("a"), {
-    className: "top-link",
+    id: "top-link",
     innerText: "The Odin Project",
     href: "https://www.theodinproject.com/",
   });

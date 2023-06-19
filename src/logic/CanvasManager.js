@@ -34,8 +34,16 @@ const CanvasManager = (() => {
   function toggleGridlines() {
     const canvasSquares = [...document.querySelectorAll(".canvas-square")];
     const canvas = document.querySelector("#canvas");
-    canvas.classList.toggle("full-borders");
-    canvasSquares.forEach((square) => square.classList.toggle("no-borders"));
+
+    if (state.getGridlinesToggledOn()) {
+      canvas.classList.add("full-borders");
+      canvasSquares.forEach((square) => square.classList.add("no-borders"));
+      state.setGridlinesToggleOn(false);
+    } else {
+      state.setGridlinesToggleOn(true);
+      canvas.classList.remove("full-borders");
+      canvasSquares.forEach((square) => square.classList.remove("no-borders"));
+    }
   }
 
   function updateGridSize() {
@@ -43,7 +51,11 @@ const CanvasManager = (() => {
     const totalSquares = gridSize ** 2;
     const canvas = document.querySelector("#canvas");
 
+    // clear the gird and ensure that gridlines are toggled on
     clearGrid();
+    if (state.getGridlinesToggledOn() === false) {
+      toggleGridlines();
+    }
 
     canvas.style["grid-template-rows"] = `repeat(${gridSize}, 1fr)`;
     canvas.style["grid-template-columns"] = `repeat(${gridSize}, 1fr)`;
